@@ -1,7 +1,9 @@
 ## Return hospital name in that state with the given rank 30-day death rate
 ##      state = two-letter code of state to search
 ##      outcome = name of condition of interest: “heart attack”, “heart failure”, or “pneumonia”
+##      num = rank to return: integer, "best", or "worst"
 ## Hospitals with no data on given outcome are excluded
+## If num exceeds the number of hospitals ranked, then NA is returned
 ## Text input is not case sensitive
 rankhospital <- function(state, outcome, num = "best") {
     ## Read outcome data
